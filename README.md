@@ -1,6 +1,6 @@
 Commerce-Web-Services-CSharp
 ============================
-***IMPORTANT You will need to create a project at https://my.ipcommerce.com in order to get access to the sandbox and test your code
+***IMPORTANT You will need to create a project at http://vantivsolutionbuilder.com/ in order to get access to the sandbox and test your code
 
 <b>Got a question?</b>  Visit http://community.ipcommerce.com/questions/ for development help.  
 
