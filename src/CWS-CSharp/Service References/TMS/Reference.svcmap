@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6229c14a-faa5-4829-ae98-949ef1e926d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TMS.wsdl" MetadataType="Wsdl" ID="0825ea50-4d56-4d3c-8b92-c1568aeefd2d" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="DataServices.wsdl" MetadataType="Wsdl" ID="912dd54d-a527-44e9-b31a-6eca6f9d9499" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Billing.wsdl" MetadataType="Wsdl" ID="6b676a46-80e2-497c-b9f3-2290d57ae12a" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="45a68083-c6f9-425a-b4e4-eff598550609" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="TMS.xsd" MetadataType="Schema" ID="0670cfbe-8907-48c5-80c2-4007e4559f6b" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="ServiceInformation.xsd" MetadataType="Schema" ID="edddd618-2b5f-4078-a605-1fc76be564ae" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Transactions.xsd" MetadataType="Schema" ID="7015f129-ee3a-4cda-8245-910766cfbbc1" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="d5558dc0-33e5-4284-9e16-9b4be17d30d6" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Bankcard.xsd" MetadataType="Schema" ID="74ce898f-e093-4708-a124-912517dfd476" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Pro.xsd" MetadataType="Schema" ID="b3349210-8767-4054-9be9-19ad630d81b5" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="ElectronicChecking.xsd" MetadataType="Schema" ID="68f82fc2-11ab-44d1-b36f-e59610faf075" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="StoredValue.xsd" MetadataType="Schema" ID="66e193f6-5d8a-4fbf-85ab-bd8183e297b8" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="DataServices.xsd" MetadataType="Schema" ID="aba9672a-19c7-4cee-9a1a-067e64b281c8" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Ipc.General.WCF.Contracts.Common.xsd" MetadataType="Schema" ID="fb4259fe-d8eb-4b7d-a749-e0688b24daf5" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="External.xsd" MetadataType="Schema" ID="8e6b9af7-3e26-4d35-8cdb-4fc6d28e90b2" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="256f2b38-6469-4ba4-a4bf-0a7b66288c17" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Faults.xsd" MetadataType="Schema" ID="0a7c76e5-3c36-4f0f-ac43-6d03ae5b5578" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Billing.xsd" MetadataType="Schema" ID="ba432501-c39d-4339-bac5-ba0919e44917" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

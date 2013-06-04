@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34DBBAFF-BFA1-496D-93F9-364A5EF59BAC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CWS.CSharp</RootNamespace>
+    <AssemblyName>CWS-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IPC-Common-Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\IPC-Common-Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CwsSampleCodeStarter.cs" />
+    <Compile Include="FaultHandlers\RestFaultHandler.cs" />
+    <Compile Include="FaultHandlers\SoapFaultHandler.cs" />
+    <Compile Include="GenerateDataObjects\DataGenerator.cs" />
+    <Compile Include="GeneratedProxies\CWSDataServicesBillingREST.cs" />
+    <Compile Include="GeneratedProxies\ErrorResponseREST.cs" />
+    <Compile Include="GeneratedProxies\CWSServiceInformationREST.cs" />
+    <Compile Include="GeneratedProxies\CWSTransactionManagementREST.cs" />
+    <Compile Include="GeneratedProxies\CWSTransactionsREST.cs" />
+    <Compile Include="Helpers\ScreenPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GeneratedProxies\CWSDataContracts.cs" />
+    <Compile Include="GeneratedProxies\CWSDataServicesBilling.cs" />
+    <Compile Include="GeneratedProxies\CWSServiceInformation.cs" />
+    <Compile Include="GeneratedProxies\CWSTransactionManagement.cs" />
+    <Compile Include="GeneratedProxies\CwsTransactionProcessing.cs" />
+    <Compile Include="GeneratedProxies\CwsTransactionProcessingUmp.cs" />
+    <Compile Include="Service References\STS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TMS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TPS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProxies\ServiceInformationProxy.cs" />
+    <Compile Include="ServiceProxies\TransactionManagementProxy.cs" />
+    <Compile Include="ServiceProxies\TransactionProcessingProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\STS\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\CWS.CSharp.STS.ApplicationData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\STS\CWS.CSharp.STS.ClaimMetaData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\STS\CWS.CSharp.STS.MerchantProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\STS\CWS.CSharp.STS.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\STS\CWS.CSharp.STS.ServiceInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\STS\External.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\Faults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\Ipc.General.WCF.Contracts.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\STS\ServiceInformation.wsdl" />
+    <None Include="Service References\STS\ServiceInformation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Bankcard.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Billing.wsdl" />
+    <None Include="Service References\TMS\Billing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.BatchDetailData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.BillingEventDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.BillingEventSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.FamilyDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.QueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.SummaryDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\CWS.CSharp.TMS.TransactionDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TMS\DataServices.wsdl" />
+    <None Include="Service References\TMS\DataServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\ElectronicChecking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\External.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Faults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Ipc.General.WCF.Contracts.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Pro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\ServiceInformation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\StoredValue.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\TMS.wsdl" />
+    <None Include="Service References\TMS\TMS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TMS\Transactions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Bankcard.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\CWS.CSharp.TPS.PingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPS\CWS.CSharp.TPS.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPS\ElectronicChecking.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\External.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Faults.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Ipc.General.WCF.Contracts.Common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Pro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\StoredValue.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\TransactionProcessing.wsdl" />
+    <None Include="Service References\TPS\TransactionProcessing.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPS\Transactions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\STS\" />
+    <WCFMetadataStorage Include="Service References\TMS\" />
+    <WCFMetadataStorage Include="Service References\TPS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\STS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\STS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\STS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TMS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TMS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TMS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
