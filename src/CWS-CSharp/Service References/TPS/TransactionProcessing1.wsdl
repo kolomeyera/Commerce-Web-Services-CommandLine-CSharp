@@ -27,18 +27,18 @@
   </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/TransactionProcessing/Imports">
-      <xsd:import namespace="http://schemas.ipcommerce.com/Ipc.General.WCF.Contracts.Common" />
-      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard/Pro" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/ElectronicChecking" />
-      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/Ipc.General.WCF.Contracts.Common/External" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/TransactionProcessing" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/Identity/1.0/" />
-      <xsd:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Faults" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/Ipc.General.WCF.Contracts.Common" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard/Pro" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/ElectronicChecking" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/Ipc.General.WCF.Contracts.Common/External" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/TransactionProcessing" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/Identity/1.0/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Faults" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICwsTransactionProcessing_Ping_InputMessage">
@@ -2458,7 +2458,7 @@
   </wsdl:binding>
   <wsdl:service name="CwsTransactionProcessing">
     <wsdl:port name="TransactionProcessing_ICwsTransactionProcessing" binding="tns:TransactionProcessing_ICwsTransactionProcessing">
-      <soap:address location="https://cws-01.cert.ipcommerce.com/2.0.18/Txn" />
+      <soap:address location="https://api.cert.vantiv.com/2.0.18/Txn" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

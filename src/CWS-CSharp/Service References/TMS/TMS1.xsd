@@ -1,13 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/DataServices/TMS" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/DataServices/TMS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" />
+  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/DataServices" />
   <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
+  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" />
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" />
   <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/ElectronicChecking" />
   <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" />
-  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/DataServices" />
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ElectronicCheckQueryRejectedParameters">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;Electronic Checking specific query parameters for QueryRejectedDetail and QueryRejectedSummary. Required.
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:QueryRejectedParameters">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.ipcommerce.com/CWS/v2.0/DataServices" minOccurs="0" name="QueryDateRange" nillable="true" type="q1:DateRange">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;Date range for the transactions. Required.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="QueryDateType" type="tns:TypeDateType">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;Indicates if the date range should query SubmitDate or ReturnDate. Required.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ServiceId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;Specific service Id for the Service Provider supporting QueryRejectedDetail and QueryRejectedSummary. Required.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ElectronicCheckQueryRejectedParameters" nillable="true" type="tns:ElectronicCheckQueryRejectedParameters" />
+  <xs:complexType name="QueryRejectedParameters">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Addendum" nillable="true" type="q2:Addendum">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;May be used for managed Query Request Addenda, or unmanaged addenda. Optional.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueryRejectedParameters" nillable="true" type="tns:QueryRejectedParameters" />
+  <xs:simpleType name="TypeDateType">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;Indicates if the date range should query SubmitDate or ReturnDate.
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SubmitDate">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;Submit Date.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ReturnDate">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;Return Date.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LastUpdatedDate">
+        <xs:annotation>
+          <xs:documentation>&lt;summary&gt;Last Updated Date.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TypeDateType" nillable="true" type="tns:TypeDateType" />
   <xs:complexType name="ElectronicCheckingRejectedSummaryResponse">
     <xs:annotation>
       <xs:appinfo />
@@ -184,14 +259,14 @@
             &lt;/summary&gt;</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" minOccurs="0" name="ApplicationData" nillable="true" type="q1:ApplicationData">
+      <xs:element xmlns:q3="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" minOccurs="0" name="ApplicationData" nillable="true" type="q3:ApplicationData">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Application data used for the transaction. Expected.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q2="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" minOccurs="0" name="MerchantProfileMerchantData" nillable="true" type="q2:MerchantProfileMerchantData">
+      <xs:element xmlns:q4="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" minOccurs="0" name="MerchantProfileMerchantData" nillable="true" type="q4:MerchantProfileMerchantData">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Merchant profile data used for the transaction. Expected.
@@ -205,14 +280,14 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q3="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Response" nillable="true" type="q3:Response">
+      <xs:element xmlns:q5="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Response" nillable="true" type="q5:Response">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Transaction response details. Expected.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q4="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Transaction" nillable="true" type="q4:Transaction">
+      <xs:element xmlns:q6="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Transaction" nillable="true" type="q6:Transaction">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Transaction request details. Expected.
@@ -285,7 +360,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q5="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="TransactionState" type="q5:TransactionState">
+      <xs:element xmlns:q7="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="TransactionState" type="q7:TransactionState">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Indicates the current state of the transaction. Expected.
@@ -354,7 +429,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q6="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="FamilyState" type="q6:TransactionState">
+      <xs:element xmlns:q8="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="FamilyState" type="q8:TransactionState">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;The current state of the family, defined as the state of the last transaction in the family. Expected.
@@ -413,7 +488,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q7="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CaptureState" type="q7:CaptureState">
+      <xs:element xmlns:q9="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CaptureState" type="q9:CaptureState">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;The capture state of the transaction. Expected.
@@ -504,7 +579,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q8="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Status" type="q8:Status">
+      <xs:element xmlns:q10="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Status" type="q10:Status">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Approval or decline status of the transaction. Expected.
@@ -532,7 +607,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q9="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="TransactionState" type="q9:TransactionState">
+      <xs:element xmlns:q11="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="TransactionState" type="q11:TransactionState">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Indicates the current state of the transaction. Expected.
@@ -563,21 +638,21 @@
             &lt;/summary&gt;</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element xmlns:q10="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" minOccurs="0" name="AVSResult" nillable="true" type="q10:AVSResult">
+      <xs:element xmlns:q12="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" minOccurs="0" name="AVSResult" nillable="true" type="q12:AVSResult">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Collection of elements that indicate the result of AVS returned by the Service Provider. Optional.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q11="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CVResult" type="q11:CVResult">
+      <xs:element xmlns:q13="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CVResult" type="q13:CVResult">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Response code returned by the card issuer indicating the result of Card Verification (CVV2/CVC2/CID) returned by the Service Provider. Optional.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q12="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" minOccurs="0" name="CardType" type="q12:TypeCardType">
+      <xs:element xmlns:q14="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/Bankcard" minOccurs="0" name="CardType" type="q14:TypeCardType">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Type of card used in the transaction. Expected.
@@ -622,7 +697,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q13="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/ElectronicChecking" minOccurs="0" name="TransactionType" type="q13:TransactionType">
+      <xs:element xmlns:q15="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/ElectronicChecking" minOccurs="0" name="TransactionType" type="q15:TransactionType">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Indicates the transaction type; either Credit or Debit. Expected.
@@ -667,7 +742,7 @@
             &lt;/summary&gt;</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element xmlns:q14="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CVResult" type="q14:CVResult">
+      <xs:element xmlns:q16="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="CVResult" type="q16:CVResult">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Response code returned by the card issuer indicating the result of Card Verification (CVV2/CVC2/CID) returned by the Service Provider. Optional.
@@ -681,7 +756,7 @@
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element xmlns:q15="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" minOccurs="0" name="CardStatus" type="q15:CardStatus">
+      <xs:element xmlns:q17="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" minOccurs="0" name="CardStatus" type="q17:CardStatus">
         <xs:annotation>
           <xs:appinfo />
           <xs:documentation>&lt;summary&gt;Indicates the status of the card if one is present. Optional.
@@ -742,75 +817,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="SummaryDetail" nillable="true" type="tns:SummaryDetail" />
-  <xs:complexType name="ElectronicCheckQueryRejectedParameters">
-    <xs:annotation>
-      <xs:appinfo />
-      <xs:documentation>&lt;summary&gt;Electronic Checking specific query parameters for QueryRejectedDetail and QueryRejectedSummary. Required.
-            &lt;/summary&gt;</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:QueryRejectedParameters">
-        <xs:sequence>
-          <xs:element xmlns:q16="http://schemas.ipcommerce.com/CWS/v2.0/DataServices" minOccurs="0" name="QueryDateRange" nillable="true" type="q16:DateRange">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;Date range for the transactions. Required.
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element minOccurs="0" name="QueryDateType" type="tns:TypeDateType">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;Indicates if the date range should query SubmitDate or ReturnDate. Required.
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element minOccurs="0" name="ServiceId" nillable="true" type="xs:string">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;Specific service Id for the Service Provider supporting QueryRejectedDetail and QueryRejectedSummary. Required.
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="ElectronicCheckQueryRejectedParameters" nillable="true" type="tns:ElectronicCheckQueryRejectedParameters" />
-  <xs:complexType name="QueryRejectedParameters">
-    <xs:sequence>
-      <xs:element xmlns:q17="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" minOccurs="0" name="Addendum" nillable="true" type="q17:Addendum">
-        <xs:annotation>
-          <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;May be used for managed Query Request Addenda, or unmanaged addenda. Optional.
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="QueryRejectedParameters" nillable="true" type="tns:QueryRejectedParameters" />
-  <xs:simpleType name="TypeDateType">
-    <xs:annotation>
-      <xs:appinfo />
-      <xs:documentation>&lt;summary&gt;Indicates if the date range should query SubmitDate or ReturnDate.
-            &lt;/summary&gt;</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="SubmitDate">
-        <xs:annotation>
-          <xs:documentation>&lt;summary&gt;Submit Date.
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="ReturnDate">
-        <xs:annotation>
-          <xs:documentation>&lt;summary&gt;Return Date.
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:element name="TypeDateType" nillable="true" type="tns:TypeDateType" />
   <xs:element name="QueryBatch">
     <xs:complexType>
       <xs:sequence>

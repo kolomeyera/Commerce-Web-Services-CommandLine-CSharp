@@ -2,6 +2,40 @@
 <xs:schema xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Addendum">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;Used to pass optional service-specific information. It is not necessary to pass this object unless specifically directed to do so by your Solutions Consultant. Optional.
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Unmanaged" nillable="true" type="tns:Unmanaged">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;Unmanaged addenda. Optional.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Addendum" nillable="true" type="tns:Addendum" />
+  <xs:complexType name="Unmanaged">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;Can be used to pass service-specific information such as username/password or session token credentials. Optional.
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Any" nillable="true" type="q1:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo />
+          <xs:documentation>&lt;summary&gt;One or more xml strings. Required.
+            &lt;/summary&gt;</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Unmanaged" nillable="true" type="tns:Unmanaged" />
   <xs:simpleType name="TransactionState">
     <xs:annotation>
       <xs:appinfo />
@@ -285,40 +319,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServiceTransactionDateTime" nillable="true" type="tns:ServiceTransactionDateTime" />
-  <xs:complexType name="Addendum">
-    <xs:annotation>
-      <xs:appinfo />
-      <xs:documentation>&lt;summary&gt;Used to pass optional service-specific information. It is not necessary to pass this object unless specifically directed to do so by your Solutions Consultant. Optional.
-            &lt;/summary&gt;</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Unmanaged" nillable="true" type="tns:Unmanaged">
-        <xs:annotation>
-          <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;Unmanaged addenda. Optional.
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Addendum" nillable="true" type="tns:Addendum" />
-  <xs:complexType name="Unmanaged">
-    <xs:annotation>
-      <xs:appinfo />
-      <xs:documentation>&lt;summary&gt;Can be used to pass service-specific information such as username/password or session token credentials. Optional.
-            &lt;/summary&gt;</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Any" nillable="true" type="q1:ArrayOfstring">
-        <xs:annotation>
-          <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;One or more xml strings. Required.
-            &lt;/summary&gt;</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Unmanaged" nillable="true" type="tns:Unmanaged" />
   <xs:simpleType name="CaptureState">
     <xs:annotation>
       <xs:appinfo />

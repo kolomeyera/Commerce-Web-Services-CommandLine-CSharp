@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Qh1L51qDJiY3dk4W2hmUOf71S+8=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Mf1ddVU+EOKJZyuU1DFLogVufxA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="TransactionProcessing_ICwsTransactionProcessing">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="TransactionProcessing_ICwsTransactionProcessing" contract="TPS.ICwsTransactionProcessing" bindingType="basicHttpBinding" address="https://cws-01.cert.ipcommerce.com/2.0.18/Txn" bindingConfiguration="TransactionProcessing_ICwsTransactionProcessing">
+    <endpoint name="TransactionProcessing_ICwsTransactionProcessing" contract="TPS.ICwsTransactionProcessing" bindingType="basicHttpBinding" address="https://api.cert.vantiv.com/2.0.18/Txn" bindingConfiguration="TransactionProcessing_ICwsTransactionProcessing">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://cws-01.cert.ipcommerce.com/2.0.18/Txn</serializedValue>
+          <serializedValue>https://api.cert.vantiv.com/2.0.18/Txn</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

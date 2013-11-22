@@ -18,27 +18,28 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="https://api.cert.vantiv.com/2.0.18/DataServices/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TMS.wsdl" MetadataType="Wsdl" ID="0825ea50-4d56-4d3c-8b92-c1568aeefd2d" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="DataServices.wsdl" MetadataType="Wsdl" ID="912dd54d-a527-44e9-b31a-6eca6f9d9499" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Billing.wsdl" MetadataType="Wsdl" ID="6b676a46-80e2-497c-b9f3-2290d57ae12a" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="45a68083-c6f9-425a-b4e4-eff598550609" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="TMS.xsd" MetadataType="Schema" ID="0670cfbe-8907-48c5-80c2-4007e4559f6b" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="ServiceInformation.xsd" MetadataType="Schema" ID="edddd618-2b5f-4078-a605-1fc76be564ae" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Transactions.xsd" MetadataType="Schema" ID="7015f129-ee3a-4cda-8245-910766cfbbc1" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="d5558dc0-33e5-4284-9e16-9b4be17d30d6" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Bankcard.xsd" MetadataType="Schema" ID="74ce898f-e093-4708-a124-912517dfd476" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Pro.xsd" MetadataType="Schema" ID="b3349210-8767-4054-9be9-19ad630d81b5" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="ElectronicChecking.xsd" MetadataType="Schema" ID="68f82fc2-11ab-44d1-b36f-e59610faf075" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="StoredValue.xsd" MetadataType="Schema" ID="66e193f6-5d8a-4fbf-85ab-bd8183e297b8" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="DataServices.xsd" MetadataType="Schema" ID="aba9672a-19c7-4cee-9a1a-067e64b281c8" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Ipc.General.WCF.Contracts.Common.xsd" MetadataType="Schema" ID="fb4259fe-d8eb-4b7d-a749-e0688b24daf5" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="External.xsd" MetadataType="Schema" ID="8e6b9af7-3e26-4d35-8cdb-4fc6d28e90b2" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="256f2b38-6469-4ba4-a4bf-0a7b66288c17" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Faults.xsd" MetadataType="Schema" ID="0a7c76e5-3c36-4f0f-ac43-6d03ae5b5578" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
-    <MetadataFile FileName="Billing.xsd" MetadataType="Schema" ID="ba432501-c39d-4339-bac5-ba0919e44917" SourceId="1" SourceUrl="https://cws-01.cert.ipcommerce.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="TMS1.wsdl" MetadataType="Wsdl" ID="2075aa15-5e8f-46bd-9b9e-150a7634b53c" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="DataServices1.wsdl" MetadataType="Wsdl" ID="f385432e-7305-4bf9-b926-f4e3b81efe0a" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Billing1.wsdl" MetadataType="Wsdl" ID="4fcb886e-1047-452a-a788-bf637ee102d4" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="7ae629e9-3575-4ba4-b887-f6dfab31fb38" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="TMS1.xsd" MetadataType="Schema" ID="14091df8-67fe-457b-ae9c-1ba7d5ee9a91" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Transactions1.xsd" MetadataType="Schema" ID="c4ed7b36-5fb5-40a3-94db-6718f2080902" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="386692ca-45af-4921-bf0c-d9f0c7c4e5cb" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="DataServices1.xsd" MetadataType="Schema" ID="adb2dab1-e525-452f-8c08-a95bcbb675bd" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="ServiceInformation1.xsd" MetadataType="Schema" ID="71a31da6-9f68-4b90-8c1a-de190e53b6bf" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Bankcard1.xsd" MetadataType="Schema" ID="ba77e303-209b-4baa-afb5-37a99908612c" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Pro1.xsd" MetadataType="Schema" ID="116ad806-6e69-405d-a975-f4897ef7de19" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="ElectronicChecking1.xsd" MetadataType="Schema" ID="efed2880-d10e-4fdc-9b70-d22c6fc7c6e8" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="StoredValue1.xsd" MetadataType="Schema" ID="16cf75c9-edb7-4d4e-84b2-2ff2c4956df8" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Ipc.General.WCF.Contracts.Common1.xsd" MetadataType="Schema" ID="09ce92bd-5f0e-42f4-b4b2-c7b58dca5e2a" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="External1.xsd" MetadataType="Schema" ID="432f8902-f4d0-411b-9890-3b747b21402d" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Faults1.xsd" MetadataType="Schema" ID="3bfe1612-ae88-4ee0-92a5-3ac32e4a3dd8" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Fault.xsd" MetadataType="Schema" ID="068eead5-b068-4434-b609-a1413f156036" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="0c64105e-2eaf-4c9b-9328-316cca32c9bc" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
+    <MetadataFile FileName="Billing1.xsd" MetadataType="Schema" ID="d21fbb39-2ad8-46c3-b07b-36b59f094701" SourceId="1" SourceUrl="https://api.cert.vantiv.com/2.0.18/DataServices/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

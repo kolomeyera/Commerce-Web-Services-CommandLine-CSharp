@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWS-CSharp", "CWS-CSharp\CWS-CSharp.csproj", "{34DBBAFF-BFA1-496D-93F9-364A5EF59BAC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPC-Common-Library", "..\..\Common-Library-CSharp-master\IPC-Common-Library\IPC-Common-Library.csproj", "{709497E3-175E-4746-AB83-EE3F74926AF8}"

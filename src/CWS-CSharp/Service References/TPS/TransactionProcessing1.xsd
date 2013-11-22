@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/TransactionProcessing" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/TransactionProcessing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="QueryAccount">
     <xs:complexType>
       <xs:sequence>

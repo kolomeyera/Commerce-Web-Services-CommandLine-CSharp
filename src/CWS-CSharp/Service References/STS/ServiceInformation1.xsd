@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/ServiceInformation" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import namespace="http://schemas.ipcommerce.com/Identity/1.0/" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="" namespace="http://schemas.ipcommerce.com/Identity/1.0/" />
   <xs:element name="SignOnWithToken">
     <xs:complexType>
       <xs:sequence>
@@ -6797,7 +6797,7 @@
       <xs:element minOccurs="0" name="IndustryType" type="tns:IndustryType">
         <xs:annotation>
           <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;The industry type of the transaction. This will be saved in the MerchantProfile (default) but may be overridden on each transaction. Required.
+          <xs:documentation>&lt;summary&gt;The industry type of the transaction. This will be saved in the MerchantProfile (default) and cannot be overridden on each transaction. Required.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="TransactionData">
     <xs:sequence>
       <xs:element minOccurs="0" name="Amount" type="xs:decimal">

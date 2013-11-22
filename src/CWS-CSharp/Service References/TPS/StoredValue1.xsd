@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" elementFormDefault="qualified" targetNamespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions/StoredValue" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
+  <xs:import schemaLocation="" namespace="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" />
   <xs:complexType name="StoredValueTransaction">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" base="q1:Transaction">

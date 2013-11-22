@@ -5635,7 +5635,7 @@
       <xs:element minOccurs="0" name="IndustryType" type="tns:IndustryType">
         <xs:annotation>
           <xs:appinfo />
-          <xs:documentation>&lt;summary&gt;The industry type of the transaction. This will be saved in the MerchantProfile (default) but may be overridden on each transaction. Required.
+          <xs:documentation>&lt;summary&gt;The industry type of the transaction. This will be saved in the MerchantProfile (default) and cannot be overridden on each transaction. Required.
             &lt;/summary&gt;</xs:documentation>
         </xs:annotation>
       </xs:element>

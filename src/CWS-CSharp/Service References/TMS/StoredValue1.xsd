@@ -574,9 +574,32 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="VirtualCardData" nillable="true" type="tns:VirtualCardData" />
-  <xs:complexType name="StoredValueTransactionResponse">
+  <xs:complexType name="StoredValueCaptureResponse">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q5="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" base="q5:Response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;Batch Identifier. Optional.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SummaryData" nillable="true" type="q5:SummaryData">
+            <xs:annotation>
+              <xs:appinfo />
+              <xs:documentation>&lt;summary&gt;Summary information for Stored Value totals. Required.
+            &lt;/summary&gt;</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StoredValueCaptureResponse" nillable="true" type="tns:StoredValueCaptureResponse" />
+  <xs:complexType name="StoredValueTransactionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" base="q6:Response">
         <xs:sequence>
           <xs:element minOccurs="0" name="Amount" type="xs:decimal">
             <xs:annotation>
@@ -599,7 +622,7 @@
             &lt;/summary&gt;</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element minOccurs="0" name="CVResult" type="q5:CVResult">
+          <xs:element minOccurs="0" name="CVResult" type="q6:CVResult">
             <xs:annotation>
               <xs:appinfo />
               <xs:documentation>&lt;summary&gt;Response code returned by the card issuer indicating the result of Card Verification (CVV2/CVC2/CID). Optional.
@@ -688,27 +711,4 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="StoredValueTransactionResponse" nillable="true" type="tns:StoredValueTransactionResponse" />
-  <xs:complexType name="StoredValueCaptureResponse">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q6="http://schemas.ipcommerce.com/CWS/v2.0/Transactions" base="q6:Response">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;Batch Identifier. Optional.
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-          <xs:element minOccurs="0" name="SummaryData" nillable="true" type="q6:SummaryData">
-            <xs:annotation>
-              <xs:appinfo />
-              <xs:documentation>&lt;summary&gt;Summary information for Stored Value totals. Required.
-            &lt;/summary&gt;</xs:documentation>
-            </xs:annotation>
-          </xs:element>
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="StoredValueCaptureResponse" nillable="true" type="tns:StoredValueCaptureResponse" />
 </xs:schema>

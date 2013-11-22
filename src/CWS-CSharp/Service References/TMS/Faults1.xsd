@@ -46,19 +46,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="TMSBaseFault" nillable="true" type="tns:TMSBaseFault" />
-  <xs:complexType name="TMSUnknownServiceKeyFault">
-    <xs:annotation>
-      <xs:appinfo />
-      <xs:documentation>&lt;summary&gt;Defines a TMS fault type.
-            &lt;/summary&gt;</xs:documentation>
-    </xs:annotation>
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:TMSBaseFault">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="TMSUnknownServiceKeyFault" nillable="true" type="tns:TMSUnknownServiceKeyFault" />
   <xs:complexType name="TMSTransactionFailedFault">
     <xs:annotation>
       <xs:appinfo />
@@ -85,4 +72,17 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="TMSOperationNotSupportedFault" nillable="true" type="tns:TMSOperationNotSupportedFault" />
+  <xs:complexType name="TMSUnknownServiceKeyFault">
+    <xs:annotation>
+      <xs:appinfo />
+      <xs:documentation>&lt;summary&gt;Defines a TMS fault type.
+            &lt;/summary&gt;</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TMSBaseFault">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TMSUnknownServiceKeyFault" nillable="true" type="tns:TMSUnknownServiceKeyFault" />
 </xs:schema>

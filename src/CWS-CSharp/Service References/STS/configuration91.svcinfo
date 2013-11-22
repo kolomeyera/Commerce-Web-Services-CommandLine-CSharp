@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lFlBvx3QcBAFtmmAqyBxlZhCvzE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="JKuNXifzqZMtJ5HiGgMn6VXO6UM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="ServiceInfoProcessing_ICWSServiceInformation">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ServiceInfoProcessing_ICWSServiceInformation" contract="STS.ICWSServiceInformation" bindingType="basicHttpBinding" address="https://cws-01.cert.ipcommerce.com/2.0.18/SvcInfo" bindingConfiguration="ServiceInfoProcessing_ICWSServiceInformation">
+    <endpoint name="ServiceInfoProcessing_ICWSServiceInformation" contract="STS.ICWSServiceInformation" bindingType="basicHttpBinding" address="https://api.cert.vantiv.com/2.0.18/SvcInfo" bindingConfiguration="ServiceInfoProcessing_ICWSServiceInformation">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://cws-01.cert.ipcommerce.com/2.0.18/SvcInfo</serializedValue>
+          <serializedValue>https://api.cert.vantiv.com/2.0.18/SvcInfo</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
